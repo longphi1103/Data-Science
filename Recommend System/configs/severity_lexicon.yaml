@@ -1,0 +1,41 @@
+base_scores:
+  positive: 0.0
+  neutral: 0.25
+  negative: 0.75
+
+strong_negative_patterns:
+  - "rất bẩn"
+  - "tệ hại"
+  - "kinh khủng"
+  - "ốm nặng"
+  - "nấm mốc"
+  - "không hề"
+  - "chỉ toàn"
+  - "không ăn"
+  - "bỏ lại"
+  - "không quay lại"
+  - "mất đến nửa tiếng"
+  - "quá tệ"
+  - "thất vọng"
+  - "lừa"
+  - "không đúng như menu"
+  - "hết món"
+  - "khó tìm"
+  - "không có chỗ gửi xe"
+
+mild_negative_patterns:
+  - "hơi"
+  - "không đặc biệt"
+  - "nhạt"
+  - "ít"
+  - "chậm"
+  - "xa"
+  - "ít lựa chọn"
+
+safety_patterns:
+  - "đau bụng"
+  - "ngộ độc"
+  - "ôi thiu"
+  - "ốm"
+  - "mốc"
+  - "mùi lạ"

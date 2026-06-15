@@ -1,0 +1,21 @@
+model:
+  provider: external
+  version: acos_vit5_base_final
+  language: vi
+  model_zip_path: models/acos_vit5_base_final.zip
+
+inference:
+  adapter: trained
+  adapter_options:
+    - placeholder
+    - trained
+  adapter_help: Use placeholder in Docker unless the trained model tokenizer is available.
+  model_zip_path: models/acos_vit5_base_final.zip
+  device: auto
+  cuda_oom_fallback_to_cpu: true
+  batch_size: 1
+  max_input_length: 384
+  max_new_tokens: 128
+  num_beams: 1
+  default_confidence: 0.80
+  low_confidence_threshold: 0.50

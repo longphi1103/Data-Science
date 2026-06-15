@@ -1,0 +1,11 @@
+monthly:
+  enabled: true
+  day_of_month: 3
+  time_local: "03:00"
+  process_previous_month: true
+idempotency:
+  key_fields:
+    - restaurant_id
+    - review_month
+    - scoring_config_hash
+    - absa_model_version

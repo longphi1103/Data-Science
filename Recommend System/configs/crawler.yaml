@@ -1,0 +1,56 @@
+target_month_delay_days: 3
+max_reviews_per_restaurant: 200
+stop_after_old_reviews: 5
+max_restaurants_per_run: 50
+source_adapter: google-maps
+respect_source_policy: true
+
+streamlit:
+  explore:
+    output_path: data/gmaps_streamlit_raw.jsonl
+    default_month: "2026-06"
+    top_n: 10
+    top_n_min: 1
+    top_n_max: 20
+    force: false
+    source_adapter: google-maps
+
+google_maps:
+  live: true
+  bbox:
+  target_url_placeholder: https://www.google.com/maps/place/...
+  peer_discovery:
+    discover_from_area: true
+    default_area_id: gmaps_area
+    default_area_name: Hai Bà Trưng, Hà Nội, Việt Nam
+    min_peers: 1
+    min_restaurants: 2
+  adapter:
+    crawler_script:
+    output_path: data/gmaps_monthly_raw.jsonl
+    input_urls_path:
+    mode: benchmark
+    headful: true
+    max_discovered_places: 30
+    max_reviews_per_restaurant: 200
+    stop_after_old_reviews: 5
+    min_peers: 0
+    min_restaurants: 0
+    no_area_network: false
+    target_restaurant_name:
+    search_queries: []
+
+politeness:
+  min_delay_seconds: 1.0
+  max_delay_seconds: 3.0
+  max_requests_per_minute: 20
+retry:
+  max_attempts: 3
+  backoff_seconds: 5
+compliance:
+  require_licensed_source: true
+  obey_robots_and_terms: true
+  identify_client: true
+  no_stealth_browser: true
+  no_captcha_bypass: true
+  no_proxy_rotation_for_evasion: true

@@ -1,0 +1,55 @@
+scoring:
+  weights:
+    negative_rate: 0.25
+    sentiment_severity: 0.18
+    mention_share: 0.12
+    rating_gap: 0.12
+    trend_score: 0.16
+    benchmark_gap: 0.17
+
+  smoothing:
+    alpha: 10
+
+  confidence:
+    support_threshold_tau: 30
+    peer_support_tau: 100
+    default_missing_confidence: 0.75
+    weights:
+      support: 0.45
+      model: 0.30
+      peer: 0.15
+      history: 0.10
+
+  risk_multiplier:
+    Food Safety: 1.20
+    Cleanliness: 1.10
+    Food Quality: 1.00
+    Service: 1.00
+    Price: 1.00
+    Ambience: 1.00
+    Location: 0.95
+    Menu: 1.00
+    Unknown: 0.70
+
+  trend:
+    mode: previous_month
+    negative_scale: 0.25
+    severity_scale: 0.30
+    min_mentions_current: 5
+    min_mentions_previous: 5
+
+  benchmark:
+    min_peer_restaurants: 5
+    min_peer_mentions_per_aspect: 20
+    benchmark_scale: 0.30
+
+  ranking:
+    force_food_safety_top3: true
+    food_safety_negative_threshold: 0.10
+
+  defaults:
+    rating_if_missing: 3.5
+    epsilon: 1.0e-9
+    trend_if_missing: 0.0
+    benchmark_if_missing: 0.0
+    risk_multiplier_if_missing: 1.0

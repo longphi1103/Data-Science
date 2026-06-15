@@ -1,0 +1,73 @@
+services:
+  api:
+    build: .
+    command: uv run uvicorn absa_recommender.api:app --host 0.0.0.0 --port 8000
+    environment:
+      ABSA_DB_PATH: /app/data/local.duckdb
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./configs:/app/configs
+      - ./models:/app/models
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  streamlit:
+    build: .
+    command: uv run streamlit run app/streamlit_app.py --server.address 0.0.0.0 --server.port 8501
+    environment:
+      ABSA_DB_PATH: /app/data/local.duckdb
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./configs:/app/configs
+      - ./models:/app/models
+
+  monthly-run:
+    build: .
+    profiles:
+      - job
+    command: >
+      uv run absa-priority run-full
+      --input ${ABSA_INPUT_PATH:-/app/data/gmaps_monthly_raw.jsonl}
+      --restaurant-id ${ABSA_RESTAURANT_ID:-res_demo}
+      --month ${ABSA_REVIEW_MONTH:-2026-06}
+      --top-n ${ABSA_TOP_N:-10}
+      --absa-adapter ${ABSA_ADAPTER:-trained}
+      --source-adapter ${ABSA_SOURCE_ADAPTER:-google-maps}
+      --db-path /app/data/local.duckdb
+      --output /app/out/priority.json
+    environment:
+      ABSA_DB_PATH: /app/data/local.duckdb
+    volumes:
+      - ./data:/app/data
+      - ./configs:/app/configs
+      - ./models:/app/models
+      - ./out:/app/out
+
+  monthly-scheduler:
+    build: .
+    profiles:
+      - scheduler
+    command: >
+      uv run python -m absa_recommender.scheduler
+      --config /app/configs/scheduler.yaml
+      --input ${ABSA_INPUT_PATH:-/app/data/gmaps_monthly_raw.jsonl}
+      --restaurant-id ${ABSA_RESTAURANT_ID:-res_demo}
+      --top-n ${ABSA_TOP_N:-10}
+      --absa-adapter ${ABSA_ADAPTER:-trained}
+      --db-path /app/data/local.duckdb
+      --output /app/out/priority.json
+      ${ABSA_SCHEDULER_RUN_IMMEDIATELY:---run-immediately}
+    environment:
+      ABSA_DB_PATH: /app/data/local.duckdb
+    volumes:
+      - ./data:/app/data
+      - ./configs:/app/configs
+      - ./models:/app/models
+      - ./out:/app/out

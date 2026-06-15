@@ -1,0 +1,134 @@
+{
+  "restaurant_id": "res_demo",
+  "generated_at": "2026-06-01T20:33:20.906273Z",
+  "recommendations": [
+    {
+      "rank": 1,
+      "aspect": "Cleanliness",
+      "sub_problem_id": "dirty_tableware",
+      "sub_problem_label": "Dụng cụ ăn uống bẩn",
+      "priority_score": 55.3438,
+      "confidence": 0.3049487296625959,
+      "severity": 0.75,
+      "mention_count": 1,
+      "negative_count": 1,
+      "opinion_examples": [
+        "bẩn"
+      ],
+      "recommended_actions": [
+        "Kiểm tra lại quy trình rửa và soi dụng cụ trước khi phục vụ.",
+        "Loại bỏ dụng cụ có vết mốc hoặc vết bẩn khó xử lý."
+      ],
+      "monitoring_kpis": [
+        "dirty_tableware_mentions_30d"
+      ],
+      "component_scores": {
+        "negative_rate": 1.0,
+        "sentiment_severity": 0.75,
+        "mention_share": 0.33333333333333337,
+        "rating_gap": 1.0,
+        "trend_score": 0.0,
+        "benchmark_gap": 0.0
+      },
+      "locator_summary": {
+        "rule+prototype": 1
+      }
+    },
+    {
+      "rank": 2,
+      "aspect": "Food Quality",
+      "sub_problem_id": "bland_or_no_flavor",
+      "sub_problem_label": "Món nhạt hoặc thiếu hương vị chính",
+      "priority_score": 53.6275,
+      "confidence": 0.29594872966259594,
+      "severity": 0.9,
+      "mention_count": 1,
+      "negative_count": 1,
+      "opinion_examples": [
+        "không hề đậm đà không có vị thịt chỉ toàn nước muối"
+      ],
+      "recommended_actions": [
+        "Rà soát định lượng nước dùng, gia vị và nguyên liệu chính trong công thức chuẩn.",
+        "Tổ chức tasting nội bộ đầu ca cho các món bị phàn nàn nhiều."
+      ],
+      "monitoring_kpis": [
+        "food_quality_negative_rate_30d",
+        "bland_food_mentions_30d"
+      ],
+      "component_scores": {
+        "negative_rate": 1.0,
+        "sentiment_severity": 0.9,
+        "mention_share": 0.33333333333333337,
+        "rating_gap": 0.75,
+        "trend_score": 0.0,
+        "benchmark_gap": 0.0
+      },
+      "locator_summary": {
+        "rule+prototype": 1
+      }
+    },
+    {
+      "rank": 3,
+      "aspect": "Menu",
+      "sub_problem_id": "menu_item_unavailable",
+      "sub_problem_label": "Món trên menu bị hết hoặc không có",
+      "priority_score": 36.2804,
+      "confidence": 0.29864511047786757,
+      "severity": 0.9,
+      "mention_count": 1,
+      "negative_count": 1,
+      "opinion_examples": [
+        "ghi món nhưng đến nơi lại hết món"
+      ],
+      "recommended_actions": [
+        "Đồng bộ tình trạng hết món giữa bếp, phục vụ và menu.",
+        "Ẩn hoặc đánh dấu món hết trên kênh online."
+      ],
+      "monitoring_kpis": [
+        "unavailable_menu_item_mentions_30d"
+      ],
+      "component_scores": {
+        "negative_rate": 0.5,
+        "sentiment_severity": 0.45,
+        "mention_share": 0.5283208335737188,
+        "rating_gap": 0.75,
+        "trend_score": 0.0,
+        "benchmark_gap": 0.0
+      },
+      "locator_summary": {
+        "rule+prototype": 1
+      }
+    },
+    {
+      "rank": 4,
+      "aspect": "Location",
+      "sub_problem_id": "hard_to_find",
+      "sub_problem_label": "Quán khó tìm",
+      "priority_score": 35.7038,
+      "confidence": 0.3061451104778676,
+      "severity": 0.9,
+      "mention_count": 1,
+      "negative_count": 1,
+      "opinion_examples": [
+        "khó tìm"
+      ],
+      "recommended_actions": [
+        "Cập nhật chỉ dẫn đường đi, bảng hiệu và thông tin bản đồ."
+      ],
+      "monitoring_kpis": [
+        "hard_to_find_mentions_30d"
+      ],
+      "component_scores": {
+        "negative_rate": 1.0,
+        "sentiment_severity": 0.825,
+        "mention_share": 0.5283208335737188,
+        "rating_gap": 0.5,
+        "trend_score": 0.0,
+        "benchmark_gap": 0.0
+      },
+      "locator_summary": {
+        "rule+prototype": 1
+      }
+    }
+  ]
+}

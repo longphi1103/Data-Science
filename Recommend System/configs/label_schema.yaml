@@ -1,0 +1,38 @@
+aspects:
+  - Food Quality
+  - Food Safety
+  - Service
+  - Price
+  - Cleanliness
+  - Ambience
+  - Location
+  - Menu
+  - Unknown
+
+sentiments:
+  - positive
+  - neutral
+  - negative
+
+validation:
+  mode: strict
+  unknown_aspect: Unknown
+  unknown_sentiment: neutral
+
+aspect_aliases:
+  food_quality: Food Quality
+  food quality: Food Quality
+  food: Food Quality
+  food_safety: Food Safety
+  food safety: Food Safety
+  safety: Food Safety
+  service: Service
+  price: Price
+  cleanliness: Cleanliness
+  clean: Cleanliness
+  ambience: Ambience
+  ambiance: Ambience
+  location: Location
+  menu: Menu
+
+sentiment_aliases: {}

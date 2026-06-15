@@ -1,0 +1,229 @@
+{
+  "restaurant_id": "res_demo",
+  "restaurant_name": "Nha hang Demo",
+  "review_month": "2026-06",
+  "generated_at": "2026-06-02T10:38:36.681073Z",
+  "top_n": 10,
+  "items": [
+    {
+      "rank": 1,
+      "aspect": "Food Safety",
+      "priority_score": 61.95,
+      "priority_confidence": 0.278021856735772,
+      "severity": 0.95,
+      "mention_count": 2,
+      "negative_count": 2,
+      "negative_rate_smoothed": 1.0,
+      "mention_share": 0.16875095137619806,
+      "rating_gap": 0.625,
+      "trend_score": 0.0,
+      "benchmark_gap": 0.0,
+      "risk_multiplier": 1.2,
+      "opinion_examples": [
+        "ngộ độc thực phẩm",
+        "lo lắng cho sức khỏe"
+      ],
+      "component_scores": {
+        "negative_rate": 1.0,
+        "sentiment_severity": 0.95,
+        "mention_share": 0.16875095137619806,
+        "rating_gap": 0.625,
+        "trend_score": 0.0,
+        "benchmark_gap": 0.0
+      },
+      "peer_summary": {
+        "peer_restaurant_count": 0,
+        "peer_negative_rate": 0.0,
+        "target_vs_peer_gap": 0.0,
+        "peer_support_flag": "low_peer_support"
+      },
+      "trend_summary": {
+        "previous_month_priority_score": null,
+        "priority_delta": null,
+        "negative_rate_delta": null,
+        "trend_flag": "insufficient_history"
+      },
+      "data_quality_flags": [
+        "low_mentions",
+        "low_peer_support",
+        "insufficient_history"
+      ]
+    },
+    {
+      "rank": 2,
+      "aspect": "Service",
+      "priority_score": 39.884,
+      "priority_confidence": 0.6845193071642408,
+      "severity": 0.4771008403361344,
+      "mention_count": 238,
+      "negative_count": 150,
+      "negative_rate_smoothed": 0.6302521008403362,
+      "mention_share": 0.8412052587595833,
+      "rating_gap": 0.45378151260504207,
+      "trend_score": 0.0,
+      "benchmark_gap": 0.0,
+      "risk_multiplier": 1.0,
+      "opinion_examples": [
+        "đổi ý",
+        "tệ hại",
+        "phải đi đến quầy bar vài lần để gọi món"
+      ],
+      "component_scores": {
+        "negative_rate": 0.6302521008403362,
+        "sentiment_severity": 0.4771008403361344,
+        "mention_share": 0.8412052587595833,
+        "rating_gap": 0.45378151260504207,
+        "trend_score": 0.0,
+        "benchmark_gap": 0.0
+      },
+      "peer_summary": {
+        "peer_restaurant_count": 0,
+        "peer_negative_rate": 0.0,
+        "target_vs_peer_gap": 0.0,
+        "peer_support_flag": "low_peer_support"
+      },
+      "trend_summary": {
+        "previous_month_priority_score": null,
+        "priority_delta": null,
+        "negative_rate_delta": null,
+        "trend_flag": "insufficient_history"
+      },
+      "data_quality_flags": [
+        "low_peer_support",
+        "insufficient_history"
+      ]
+    },
+    {
+      "rank": 3,
+      "aspect": "Cleanliness",
+      "priority_score": 33.3197,
+      "priority_confidence": 0.6339017506192455,
+      "severity": 0.3393333333333333,
+      "mention_count": 75,
+      "negative_count": 30,
+      "negative_rate_smoothed": 0.4,
+      "mention_share": 0.665216818406368,
+      "rating_gap": 0.5166666666666667,
+      "trend_score": 0.0,
+      "benchmark_gap": 0.0,
+      "risk_multiplier": 1.1,
+      "opinion_examples": [
+        "rất bẩn",
+        "mở toang khiến bên trong lạnh kinh khủng",
+        "chưa được rửa và rất bẩn"
+      ],
+      "component_scores": {
+        "negative_rate": 0.4,
+        "sentiment_severity": 0.3393333333333333,
+        "mention_share": 0.665216818406368,
+        "rating_gap": 0.5166666666666667,
+        "trend_score": 0.0,
+        "benchmark_gap": 0.0
+      },
+      "peer_summary": {
+        "peer_restaurant_count": 0,
+        "peer_negative_rate": 0.0,
+        "target_vs_peer_gap": 0.0,
+        "peer_support_flag": "low_peer_support"
+      },
+      "trend_summary": {
+        "previous_month_priority_score": null,
+        "priority_delta": null,
+        "negative_rate_delta": null,
+        "trend_flag": "insufficient_history"
+      },
+      "data_quality_flags": [
+        "low_peer_support",
+        "insufficient_history"
+      ]
+    },
+    {
+      "rank": 4,
+      "aspect": "Food Quality",
+      "priority_score": 32.3975,
+      "priority_confidence": 0.6793068027683569,
+      "severity": 0.32107843137254904,
+      "mention_count": 306,
+      "negative_count": 127,
+      "negative_rate_smoothed": 0.41503267973856206,
+      "mention_share": 0.8796652065157525,
+      "rating_gap": 0.4738562091503268,
+      "trend_score": 0.0,
+      "benchmark_gap": 0.0,
+      "risk_multiplier": 1.0,
+      "opinion_examples": [
+        "không hề đậm đà không có vị thịt chỉ toàn nước muối",
+        "khô chẳng có gì đặc biệt",
+        "mất đến nửa tiếng mới pha xong"
+      ],
+      "component_scores": {
+        "negative_rate": 0.41503267973856206,
+        "sentiment_severity": 0.32107843137254904,
+        "mention_share": 0.8796652065157525,
+        "rating_gap": 0.4738562091503268,
+        "trend_score": 0.0,
+        "benchmark_gap": 0.0
+      },
+      "peer_summary": {
+        "peer_restaurant_count": 0,
+        "peer_negative_rate": 0.0,
+        "target_vs_peer_gap": 0.0,
+        "peer_support_flag": "low_peer_support"
+      },
+      "trend_summary": {
+        "previous_month_priority_score": null,
+        "priority_delta": null,
+        "negative_rate_delta": null,
+        "trend_flag": "insufficient_history"
+      },
+      "data_quality_flags": [
+        "low_peer_support",
+        "insufficient_history"
+      ]
+    },
+    {
+      "rank": 5,
+      "aspect": "Price",
+      "priority_score": 30.6173,
+      "priority_confidence": 0.5971459787230972,
+      "severity": 0.335,
+      "mention_count": 50,
+      "negative_count": 21,
+      "negative_rate_smoothed": 0.42,
+      "mention_share": 0.6039431044157878,
+      "rating_gap": 0.57,
+      "trend_score": 0.0,
+      "benchmark_gap": 0.0,
+      "risk_multiplier": 1.0,
+      "opinion_examples": [
+        "đắt đỏ",
+        "không có",
+        "khá đắt"
+      ],
+      "component_scores": {
+        "negative_rate": 0.42,
+        "sentiment_severity": 0.335,
+        "mention_share": 0.6039431044157878,
+        "rating_gap": 0.57,
+        "trend_score": 0.0,
+        "benchmark_gap": 0.0
+      },
+      "peer_summary": {
+        "peer_restaurant_count": 0,
+        "peer_negative_rate": 0.0,
+        "target_vs_peer_gap": 0.0,
+        "peer_support_flag": "low_peer_support"
+      },
+      "trend_summary": {
+        "previous_month_priority_score": null,
+        "priority_delta": null,
+        "negative_rate_delta": null,
+        "trend_flag": "insufficient_history"
+      },
+      "data_quality_flags": [
+        "low_peer_support",
+        "insufficient_history"
+      ]
+    }
+  ]
+}

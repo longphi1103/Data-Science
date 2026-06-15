@@ -1,0 +1,8 @@
+default_top_n: 5
+show_opinion_examples_when_allowed: true
+history_months: 6
+charts:
+  review_count_trend: true
+  rating_trend: true
+  aspect_mentions: true
+  sentiment_distribution: true

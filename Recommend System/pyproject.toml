@@ -1,0 +1,54 @@
+[project]
+name = "absa-aspect-priority-engine"
+version = "0.1.0"
+description = "Local-first ABSA Aspect Priority Engine for Vietnamese restaurant reviews."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb",
+    "fastapi",
+    "playwright",
+    "polars",
+    "pydantic",
+    "pyyaml",
+    "safetensors",
+    "scikit-learn",
+    "sentencepiece",
+    "streamlit",
+    "torch==2.11.0+cu128",
+    "transformers",
+    "typer",
+    "uvicorn",
+]
+
+[project.scripts]
+absa-priority = "absa_recommender.cli:app"
+absa-rec = "absa_recommender.cli:app"
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/absa_recommender"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

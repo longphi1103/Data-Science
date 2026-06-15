@@ -1,0 +1,8 @@
+area:
+  radius_meters: 1500
+peer_filters:
+  included_types:
+    - restaurant
+  min_rating: 0
+  max_peers: 30
+  min_reviews: 1

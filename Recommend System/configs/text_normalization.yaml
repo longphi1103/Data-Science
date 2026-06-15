@@ -1,0 +1,76 @@
+enabled: true
+
+unicode:
+  form: NFC
+
+case:
+  lowercase: true
+
+whitespace:
+  collapse: true
+  strip: true
+
+punctuation:
+  normalize_repeated: true
+  remove: false
+  keep_sentence_marks: true
+
+emoji:
+  mode: remove
+
+special_chars:
+  remove_control_chars: true
+  normalize_currency: false
+
+word_segmentation:
+  enabled: false
+
+replacements:
+  "ko": "không"
+  "k": "không"
+  "kg": "không"
+  "khong": "không"
+  "hok": "không"
+  "hong": "không"
+  "hem": "không"
+  "nv": "nhân viên"
+  "nvien": "nhân viên"
+  "nhan vien": "nhân viên"
+  "pv": "phục vụ"
+  "phuc vu": "phục vụ"
+  "vs": "với"
+  "dc": "được"
+  "đc": "được"
+  "okie": "ok"
+  "bt": "bình thường"
+  "bth": "bình thường"
+  "ban": "bẩn"
+  "dơ": "bẩn"
+  "dirty": "bẩn"
+  "parking": "gửi xe"
+  "30p": "30 phút"
+  "15p": "15 phút"
+  "nửa tiếng": "30 phút"
+
+phrase_replacements:
+  "sold out": "hết món"
+  "không ngon lắm": "không ngon"
+  "không được ngon": "không ngon"
+  "phục vụ lâu": "phục vụ chậm"
+  "đợi lâu": "chờ lâu"
+  "chờ hơi lâu": "chờ lâu"
+  "lên món lâu": "lên món chậm"
+
+stopwords:
+  enabled: false
+  protected_words:
+    - "không"
+    - "chưa"
+    - "chẳng"
+    - "đừng"
+    - "kém"
+    - "tệ"
+  words:
+    - "thì"
+    - "là"
+    - "mà"

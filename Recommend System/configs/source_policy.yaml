@@ -1,0 +1,10 @@
+source_policy:
+  google_maps:
+    raw_text_retention: check_license
+    allow_dashboard_snippets: false
+    allow_absa_training: false
+    require_attribution: true
+  licensed_provider:
+    raw_text_retention: per_contract
+    allow_dashboard_snippets: true
+    allow_absa_training: true
